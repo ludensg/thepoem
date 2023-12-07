@@ -1,0 +1,178 @@
+.App {
+    text-align: center;
+  }
+  
+  body {
+    font-family: 'Times New Roman';
+    white-space: nowrap;
+  }
+  
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+
+  
+ 
+  .money-amount {
+    color: #025401;
+    /* Add your CSS rules */
+  }
+  
+  
+  .sort-button {
+    padding: '0 15px';
+    /* Add your CSS rules */
+  }
+  
+  .transactions-container {
+    overflow-x: auto;
+    width: 100%;
+    /* Add your CSS rules */
+  }
+  
+  
+  .App-header {
+    white-space: nowrap;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  tbody{
+     white-space: nowrap;
+  }
+  
+  .auto {
+    line-break: auto;
+  }
+  
+  .loose {
+    line-break: loose;
+  }
+  
+  .normal {
+    line-break: normal;
+  }
+  
+  .strict {
+    line-break: strict;
+  }
+  
+  .anywhere {
+    line-break: anywhere;
+  }
+  
+  
+  .button {
+    background-color: #FFFFFF;
+    border: 1px solid rgb(209,213,219);
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #111827;
+    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    padding: .75rem 1rem;
+    text-align: center;
+    text-decoration: none #D1D5DB solid;
+    text-decoration-thickness: auto;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button:hover {
+    background-color: rgb(249,250,251);
+  }
+  
+  .button:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  
+  .button:focus-visible {
+    box-shadow: none;
+  }
+  
+  .mobile-break {
+    display: none;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    .responsive {
+        margin: 0 auto;
+        width: 90%;
+    }
+  
+    .responsive-btn {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+        padding: 25px 0 !important;
+    }
+  
+    .table-padding {
+        padding: 0 10px !important;
+    }
+  
+    .text-align {
+      text-align: center;
+      position: relative;
+      left: 0 !important;
+    }
+  
+    .mobile-break {
+      display: inline;
+    }
+  
+      .transactions-table {
+        float: right; /* ...float the table to the right */
+        /*overflow-x: auto; */
+      }
+  
+     /* .div {
+        overflow-x: auto;
+      }    */
+  
+  }
+  
+  
+  .transactions-table {
+    float: none; /* By default, don't float */
+   /* overflow-x: hidden;*/
+  }
+  
+  /* .div {
+    overflow-x: hidden;
+  } */
