@@ -164,6 +164,22 @@ document.addEventListener('DOMContentLoaded', function() {
         renderTransactions(transactions);
     }
 
+    function calculateAndDisplayTotals(transactions) {
+        const constantAmount = 1254.59; // This is the constant amount of money you have.
+        let totalValue = 0;
+      
+        transactions.forEach(transaction => {
+          totalValue += parseFloat(transaction.Cost);
+        });
+      
+        const percentageValue = (totalValue / constantAmount) * 100;
+      
+        // Update the HTML
+        document.getElementById('total-value').textContent = totalValue.toFixed(2);
+        document.getElementById('percentage-value').textContent = percentageValue.toFixed(2) + '%';
+      }
+
     // Initial render
     renderTransactions(transactions);
+    calculateAndDisplayTotals(transactions);
 });
