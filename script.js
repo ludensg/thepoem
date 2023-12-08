@@ -168,7 +168,4 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('percentage-value').textContent = percentageValue.toFixed(2) + '%';
       }
 
-    // Initial render
-    renderTransactions(transactions);
-    calculateAndDisplayTotals(transactions);
 });
