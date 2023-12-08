@@ -23,20 +23,23 @@ document.addEventListener('DOMContentLoaded', function() {
           let insideQuotes = false;
       
           for (let i = 0; i < line.length; i++) {
-            const char = line[i];
-            if (char === '"') {
-              insideQuotes = !insideQuotes;
-            } else if (char === ',' && !insideQuotes) {
-              values.push(currentField.trim());
-              currentField = '';
-            } else {
-              currentField += char;
-            }
+              const char = line[i];
+              if (char === '"' && (i === 0 || line[i - 1] !== '\\')) {
+                  insideQuotes = !insideQuotes;
+                  continue; // Skip adding the quote itself to the field
+              }
+              if (char === ',' && !insideQuotes) {
+                  values.push(currentField.trim());
+                  currentField = '';
+              } else {
+                  currentField += char;
+              }
           }
       
-          values.push(currentField.trim());
+          values.push(currentField.trim()); // Add last field
           return values;
-        }
+      }
+      
       
         return lines.map(line => {
           const data = parseCSVLine(line);
