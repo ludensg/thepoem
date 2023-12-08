@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // You can then proceed to parse the CSV text
       transactions = parseCSVData(csvText);
       renderTransactions(transactions);
+      calculateAndDisplayTotals(transactions); // Call the function to calculate and display totals
     })
     .catch(error => console.error('Error fetching the CSV file:', error));
 
