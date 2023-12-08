@@ -125,9 +125,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Sort transactions by value
     function sortByValue() {
-      console.log("Before sort:", transactions);
+      console.log("hello");
       transactions.sort((a, b) => parseFloat(b.Amount) - parseFloat(a.Amount));
-      console.log("After sort:", transactions);
       renderTransactions(transactions);
   }
   
