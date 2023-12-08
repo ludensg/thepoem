@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
           row.innerHTML += `<td align="right" style="padding: 0px 5px; opacity: 0.5; font-size: 75%; white-space: nowrap;">${transaction.Item}</td>`;
       
           // Cost
-          row.innerHTML += `<td align="left" style="color: green; opacity: 0.7; font-size: 75%; white-space: nowrap;">${transaction.Cost}</td>`;
+          row.innerHTML += `<td align="left" style="color: green; opacity: 0.7; font-size: 75%; white-space: nowrap;">$${transaction.Cost}</td>`;
       
           // Status
           if (transaction.Status) {
@@ -125,9 +125,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Sort transactions by value
     function sortByValue() {
-        transactions.sort((a, b) => parseFloat(b.Amount) - parseFloat(a.Amount));
-        renderTransactions(transactions);
-    }
+      console.log("Before sort:", transactions);
+      transactions.sort((a, b) => parseFloat(b.Amount) - parseFloat(a.Amount));
+      console.log("After sort:", transactions);
+      renderTransactions(transactions);
+  }
+  
 
     // Sort transactions by earliest date
     function sortByEarliest() {
