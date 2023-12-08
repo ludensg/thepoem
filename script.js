@@ -12,18 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(error => console.error('Error fetching the CSV file:', error));
 
     // Parse the CSV data into a usable format (array of objects)
-    /*
-    function parseCSVData(csvData) {
-        const lines = csvData.trim().split('\n');
-        const headers = lines.shift().split(',');
-        return lines.map(line => {
-            const data = line.split(',');
-            return headers.reduce((obj, nextKey, index) => {
-                obj[nextKey.trim()] = data[index].trim();
-                return obj;
-            }, {});
-        });
-    } */
     function parseCSVData(csvData) {
         const lines = csvData.trim().split('\n');
         const headers = lines.shift().split(',');
@@ -165,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function calculateAndDisplayTotals(transactions) {
-        const constantAmount = 1254.59; // This is the constant amount of money you have.
+        const constantAmount = 1254.59; // This is the constant amount of money you had.
         let totalValue = 0;
       
         transactions.forEach(transaction => {
@@ -175,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const percentageValue = (totalValue / constantAmount) * 100;
       
         // Update the HTML
-        document.getElementById('total-value').textContent = totalValue.toFixed(2);
+        document.getElementById('total-value').textContent = '$' + totalValue.toFixed(2);
         document.getElementById('percentage-value').textContent = percentageValue.toFixed(2) + '%';
       }
 
